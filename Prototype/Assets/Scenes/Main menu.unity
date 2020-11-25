@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202154160}
   - component: {fileID: 202154161}
+  - component: {fileID: 202154162}
   m_Layer: 0
   m_Name: 'backgroundButton '
   m_TagString: Untagged
@@ -188,6 +189,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &202154162
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202154159}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.5, y: 7.5}
+    newSize: {x: 7.5, y: 7.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 7.5}
+  m_EdgeRadius: 0
 --- !u!1 &468781618
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,19 +276,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &468781620
-Transform:
+--- !u!224 &468781620
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468781618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -260, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 86.13, y: 84.215996, z: 63.8}
   m_Children: []
   m_Father: {fileID: 1566214680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10.1, y: 7.6092}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &511442102
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +324,7 @@ Transform:
   m_Children:
   - {fileID: 975177772}
   m_Father: {fileID: 1566214680}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &511442104
 SpriteRenderer:
@@ -391,7 +422,7 @@ GameObject:
   - component: {fileID: 552923907}
   - component: {fileID: 552923909}
   m_Layer: 5
-  m_Name: quantity
+  m_Name: quantityScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,16 +436,16 @@ RectTransform:
   m_GameObject: {fileID: 552923905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08049854, y: 0.08049854, z: 0.08049854}
+  m_LocalScale: {x: 0.999746, y: 0.999746, z: 0.999746}
   m_Children: []
-  m_Father: {fileID: 1187406499}
-  m_RootOrder: 0
+  m_Father: {fileID: 1566214680}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.097, y: -0.04}
-  m_SizeDelta: {x: 172.417, y: 46.3}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 1.662735, y: -127.84158}
+  m_SizeDelta: {x: 172.41699, y: 46.299988}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &552923907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 927701440}
   - component: {fileID: 927701441}
+  - component: {fileID: 927701442}
   m_Layer: 0
   m_Name: backgroundButton
   m_TagString: Untagged
@@ -603,6 +635,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &927701442
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927701439}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.5, y: 7.5}
+    newSize: {x: 7.5, y: 7.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 7.5}
+  m_EdgeRadius: 0
 --- !u!1 &975177771
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017778125}
   - component: {fileID: 1017778126}
+  - component: {fileID: 1017778127}
   m_Layer: 0
   m_Name: backgroundButton
   m_TagString: Untagged
@@ -694,19 +752,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1017778125
-Transform:
+--- !u!224 &1017778125
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1017778124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -95.9, y: -222.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 1566214680}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -93.6, y: -221.5}
+  m_SizeDelta: {x: 7.5, y: 7.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1017778126
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -753,6 +816,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1017778127
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017778124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.5, y: 7.5}
+    newSize: {x: 7.5, y: 7.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 7.5}
+  m_EdgeRadius: 0
 --- !u!1 &1170947644
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,10 +866,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -31.963799, y: 127.4724, z: 0}
   m_LocalScale: {x: 12.498245, y: 12.498245, z: 12.498245}
-  m_Children:
-  - {fileID: 1669613469}
+  m_Children: []
   m_Father: {fileID: 1566214680}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1170947646
 SpriteRenderer:
@@ -900,10 +987,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -31.94466, y: -127.3448, z: 0}
   m_LocalScale: {x: 12.419431, y: 12.419431, z: 12.419431}
-  m_Children:
-  - {fileID: 552923906}
+  m_Children: []
   m_Father: {fileID: 1566214680}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1345157844
 GameObject:
@@ -991,6 +1077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439351811}
   - component: {fileID: 1439351812}
+  - component: {fileID: 1439351813}
   m_Layer: 0
   m_Name: backgroundButton
   m_TagString: Untagged
@@ -1009,7 +1096,7 @@ Transform:
   m_LocalScale: {x: 7.9998813, y: 7.9998813, z: 0.99974597}
   m_Children: []
   m_Father: {fileID: 1566214680}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1439351812
 SpriteRenderer:
@@ -1057,6 +1144,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1439351813
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439351810}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.5, y: 7.5}
+    newSize: {x: 7.5, y: 7.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 7.5}
+  m_EdgeRadius: 0
 --- !u!1 &1566214676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1218,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1144,10 +1256,12 @@ RectTransform:
   m_Children:
   - {fileID: 468781620}
   - {fileID: 1017778125}
-  - {fileID: 1439351811}
   - {fileID: 511442103}
+  - {fileID: 1439351811}
   - {fileID: 927701440}
   - {fileID: 202154160}
+  - {fileID: 552923906}
+  - {fileID: 1669613469}
   - {fileID: 1170947645}
   - {fileID: 1187406499}
   m_Father: {fileID: 0}
@@ -1169,7 +1283,7 @@ GameObject:
   - component: {fileID: 1669613471}
   - component: {fileID: 1669613470}
   m_Layer: 5
-  m_Name: quantity
+  m_Name: quantityGem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,14 +1297,14 @@ RectTransform:
   m_GameObject: {fileID: 1669613468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08001124, y: 0.08001124, z: 0.08001124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1170947645}
-  m_RootOrder: 0
+  m_Father: {fileID: 1566214680}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.11, y: 0.07}
+  m_AnchoredPosition: {x: 94.393456, y: 128.34727}
   m_SizeDelta: {x: 171.492, y: 46.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669613470
