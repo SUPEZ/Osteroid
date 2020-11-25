@@ -7,6 +7,7 @@ public class CntrlSmile : MonoBehaviour
     public GameController gameController;
     public Sprite goodSmile;
     public Sprite badSmile;
+
     private float speed, tilt;
     private Vector3 target;
     private bool anger = false;
@@ -104,19 +105,20 @@ public class CntrlSmile : MonoBehaviour
     {
         if (gameObject.transform.position.x >= 0 && gameObject.transform.position.y >= 0)
         {
-            target = new Vector3(Random.Range(-10, 0) * 100, Random.Range(-10, 0) * 100, 0);
+            target = new Vector3(Random.Range(-10, 1) * 100, Random.Range(-10, 1) * 100, 0);
         }
         else if (gameObject.transform.position.x < 0 && gameObject.transform.position.y >= 0)
         {
-            target = new Vector3(Random.Range(0, 10) * 100, Random.Range(-10, 0) * 100, 0);
+            target = new Vector3(Random.Range(1, 10) * 100, Random.Range(-10, 1) * 100, 0);
         }
         else if (gameObject.transform.position.x < 0 && gameObject.transform.position.y < 0)
         {
-            target = new Vector3(Random.Range(0, 10) * 100, Random.Range(0, 10) * 100, 0);
+            target = new Vector3(Random.Range(1, 10) * 100, Random.Range(1, 10) * 100, 0);
         }
         else if (gameObject.transform.position.x >= 0 && gameObject.transform.position.y < 0)
         {
-            target = new Vector3(Random.Range(-10, 0) * 100, Random.Range(0, 10) * 100, 0);
+            target = new Vector3(Random.Range(-10, 1) * 100, Random.Range(1, 10) * 100, 0);
         }
     }
+    
 }
