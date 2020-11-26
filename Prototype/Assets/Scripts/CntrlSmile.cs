@@ -40,7 +40,7 @@ public class CntrlSmile : MonoBehaviour
         }
     }
     
-    private void OnCollisionEnter(Collision nearObj)
+    private void OnCollisionEnter2D(Collision2D nearObj)
     {
         
         if (nearObj.gameObject.tag == "Wall")

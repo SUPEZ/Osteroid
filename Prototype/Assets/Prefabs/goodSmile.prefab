@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4848052366342088}
   - component: {fileID: 212100749619683522}
-  - component: {fileID: 135923678653754648}
   - component: {fileID: 114880291302347842}
-  - component: {fileID: 54790508077356992}
+  - component: {fileID: 58507608348887176}
+  - component: {fileID: 50276781725797630}
   m_Layer: 0
   m_Name: goodSmile
   m_TagString: Smile
@@ -43,21 +43,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54790508077356992
-Rigidbody:
+--- !u!50 &50276781725797630
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606677245037588}
-  serializedVersion: 2
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.5
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: c4433b433563e6b4ebc0ebe3c48f14cc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58507608348887176
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606677245037588}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: c4433b433563e6b4ebc0ebe3c48f14cc, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.56
 --- !u!114 &114880291302347842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,18 +92,6 @@ MonoBehaviour:
   gameController: {fileID: 0}
   goodSmile: {fileID: 21300000, guid: a2bd550470c31e845b6c26f543e9e582, type: 3}
   badSmile: {fileID: 21300000, guid: caf166d1667cea7438d3a73945735d13, type: 3}
---- !u!135 &135923678653754648
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606677245037588}
-  m_Material: {fileID: 13400000, guid: 3e66bb0e3427c0c4fba290c46515f599, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.56
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212100749619683522
 SpriteRenderer:
   m_ObjectHideFlags: 1
