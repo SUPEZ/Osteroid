@@ -92,6 +92,8 @@ MonoBehaviour:
   gameController: {fileID: 0}
   goodSmile: {fileID: 21300000, guid: a2bd550470c31e845b6c26f543e9e582, type: 3}
   badSmile: {fileID: 21300000, guid: caf166d1667cea7438d3a73945735d13, type: 3}
+  goldSmile: {fileID: 21300000, guid: 9f9e496e96effc64486d79e3e6066ffa, type: 3}
+  isGold: 0
 --- !u!212 &212100749619683522
 SpriteRenderer:
   m_ObjectHideFlags: 1

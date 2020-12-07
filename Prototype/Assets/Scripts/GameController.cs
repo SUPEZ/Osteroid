@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour {
     
     public Text score;
     public int cntScore = 0;
+    public int randomGold;
 
     public bool semaphoreForSpawn = true;
     public bool semaphoreForSpeed = true;
@@ -20,20 +21,19 @@ public class GameController : MonoBehaviour {
     private Vector3 spawnPosition;
     
     void Start () {
-        
+        //randomGold = Random.Range(20, 200);
+        randomGold = 20;
         AddSmile();
     }
 	
 	void Update () {
-        // Black Hole
-        blackHole.transform.Rotate(Vector3.back * tilt);
-        
         // Score
         score.text = cntScore.ToString();
+        
 
         if (PlayerPrefs.GetInt("Score") < cntScore)
             PlayerPrefs.SetInt("Score", cntScore);
-
+        
         // Smile Work
         if (cntScore != 0 && cntScore % 10 == 0 && semaphoreForSpawn == true) {
             AddSmile();
@@ -52,31 +52,18 @@ public class GameController : MonoBehaviour {
 
     void AddSmile ()
     {
+        
         spawnPosition = new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(-3.5f, 3.5f), 0);
-        BlackHoleAction();
         GameObject smile = Instantiate(goodSmile, spawnPosition, Quaternion.identity);
         smile.GetComponent<CntrlSmile>().gameController = this;
-        smiles.Add(smile);
-        Debug.Log(smiles.Count);
-    }
-    /*
-    public void DeleteSmile(GameObject smileToDelete)
-    {
-        foreach (GameObject smile in smiles)
+        if (cntScore == randomGold)
         {
-            if (smile == smileToDelete)
-            {
-                smiles.Remove(smileToDelete);
-            }
+            smile.GetComponent<CntrlSmile>().isGold = true;
+            randomGold = Random.Range(randomGold, randomGold + 100);
         }
+        smiles.Add(smile);        
     }
-    */
-
-    private void BlackHoleAction()
-    {
-        blackHole.transform.position = spawnPosition;
-    }
-
+        
     private void PlayerLose()
     {
         SceneManager.LoadScene("Main Menu");
