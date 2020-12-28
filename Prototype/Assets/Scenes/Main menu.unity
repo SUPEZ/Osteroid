@@ -123,8 +123,9 @@ GameObject:
   - component: {fileID: 202154160}
   - component: {fileID: 202154161}
   - component: {fileID: 202154162}
+  - component: {fileID: 202154163}
   m_Layer: 0
-  m_Name: 'backgroundButton '
+  m_Name: ScoreboardButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,6 +220,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.5, y: 7.5}
   m_EdgeRadius: 0
+--- !u!114 &202154163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202154159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteOnMouseUpButton: {fileID: 0}
+  SpriteOnMouseDownButton: {fileID: 0}
 --- !u!1 &511442102
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,8 +515,9 @@ GameObject:
   - component: {fileID: 927701440}
   - component: {fileID: 927701441}
   - component: {fileID: 927701442}
+  - component: {fileID: 927701443}
   m_Layer: 0
-  m_Name: backgroundButton
+  m_Name: AdsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,6 +612,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.5, y: 7.5}
   m_EdgeRadius: 0
+--- !u!114 &927701443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927701439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteOnMouseUpButton: {fileID: 0}
+  SpriteOnMouseDownButton: {fileID: 0}
 --- !u!1 &1017778124
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,8 +635,9 @@ GameObject:
   - component: {fileID: 1017778125}
   - component: {fileID: 1017778126}
   - component: {fileID: 1017778127}
+  - component: {fileID: 1017778128}
   m_Layer: 0
-  m_Name: backgroundButton
+  m_Name: TutorialButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,6 +732,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.5, y: 7.5}
   m_EdgeRadius: 0
+--- !u!114 &1017778128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017778124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteOnMouseUpButton: {fileID: 0}
+  SpriteOnMouseDownButton: {fileID: 0}
 --- !u!1 &1170947644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,8 +1072,9 @@ GameObject:
   - component: {fileID: 1439351811}
   - component: {fileID: 1439351812}
   - component: {fileID: 1439351813}
+  - component: {fileID: 1439351814}
   m_Layer: 0
-  m_Name: backgroundButton
+  m_Name: MarketButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1126,6 +1169,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.5, y: 7.5}
   m_EdgeRadius: 0
+--- !u!114 &1439351814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439351810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteOnMouseUpButton: {fileID: 0}
+  SpriteOnMouseDownButton: {fileID: 0}
 --- !u!1 &1566214676
 GameObject:
   m_ObjectHideFlags: 0

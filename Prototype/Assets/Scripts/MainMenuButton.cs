@@ -24,6 +24,18 @@ public class MainMenuButton : MonoBehaviour {
             case "PlayButton":
                 SceneManager.LoadScene("Play");
                 break;
+            case "TutorialButton":
+                SceneManager.LoadScene("Tutorial");
+                break;
+            case "MarketButton":
+                SceneManager.LoadScene("Market");
+                break;
+            case "AdsButton":
+                SceneManager.LoadScene("Ads");
+                break;
+            case "ScoreboardButton":
+                SceneManager.LoadScene("Scoreboard");
+                break;
         }
     }
 }
