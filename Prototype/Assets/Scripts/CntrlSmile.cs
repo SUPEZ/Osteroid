@@ -5,9 +5,7 @@ using UnityEngine;
 public class CntrlSmile : MonoBehaviour
 {
     public GameController gameController;
-    public Sprite goodSmile;
-    public Sprite badSmile;
-    public Sprite goldSmile;
+    public GameObject objectGoodSmile;
     public bool isGold = false;
 
     private float speed, tilt;
@@ -27,22 +25,25 @@ public class CntrlSmile : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
-        transform.Rotate(Vector3.back * tilt);
+        objectGoodSmile.transform.Rotate(Vector3.back * tilt);
         if (localScore % randomAngerActivator == 0 && localScore != 0)
         {
             isAnger = true;
             tilt = Random.Range(-10, 10);
-            GetComponent<SpriteRenderer>().sprite = badSmile;
+            objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red + Color.black);
+            //GetComponent<SpriteRenderer>().sprite = badSmile;
         }
         else if (isAnger == false)
         {
             if (isGold)
             {
-                GetComponent<SpriteRenderer>().sprite = goldSmile;
+                objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow );
+                //GetComponent<SpriteRenderer>().sprite = goldSmile;
             }
             else
             {
-                GetComponent<SpriteRenderer>().sprite = goodSmile;
+                objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.gray + Color.black);
+                //GetComponent<SpriteRenderer>().sprite = goodSmile;
             }
             
         }

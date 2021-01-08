@@ -52,8 +52,8 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
@@ -580,7 +580,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.2
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -602,13 +602,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736968034}
-  m_LocalRotation: {x: 0.4216722, y: -0.50462663, z: -0.028261488, w: 0.75282514}
-  m_LocalPosition: {x: 3, y: 0.19, z: -0.02}
+  m_LocalRotation: {x: 0.1464465, y: -0.3535538, z: 0.3535533, w: 0.8535533}
+  m_LocalPosition: {x: 3.53, y: 5.53, z: -0.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 37.327003, y: -80.219, z: -36.065002}
+  m_LocalEulerAnglesHint: {x: 30.000002, y: -35.264, z: 35.264}
 --- !u!1 &809035882
 GameObject:
   m_ObjectHideFlags: 0
