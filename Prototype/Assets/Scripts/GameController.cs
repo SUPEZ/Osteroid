@@ -8,8 +8,7 @@ public class GameController : MonoBehaviour {
 
     public float speed, tilt;
     public GameObject goodSmile;
-    public GameObject blackHole;
-    
+        
     public Text score;
     public int cntScore = 0;
     public int randomGold;
@@ -21,15 +20,13 @@ public class GameController : MonoBehaviour {
     private Vector3 spawnPosition;
     
     void Start () {
-        //randomGold = Random.Range(20, 200);
-        randomGold = 20;
+        randomGold = Random.Range(20, 200);        
         AddSmile();
     }
 	
 	void Update () {
         // Score
-        score.text = cntScore.ToString();
-        
+        score.text = cntScore.ToString();        
 
         if (PlayerPrefs.GetInt("Score") < cntScore)
             PlayerPrefs.SetInt("Score", cntScore);

@@ -34,7 +34,7 @@ public class MainMenuButton : MonoBehaviour {
                 SceneManager.LoadScene("Ads");
                 break;
             case "ScoreboardButton":
-                SceneManager.LoadScene("Scoreboard");
+                SceneManager.LoadScene("Options");
                 break;
         }
     }

@@ -30,20 +30,17 @@ public class CntrlSmile : MonoBehaviour
         {
             isAnger = true;
             tilt = Random.Range(-10, 10);
-            objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red + Color.black);
-            //GetComponent<SpriteRenderer>().sprite = badSmile;
+            objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red + Color.black);            
         }
         else if (isAnger == false)
         {
             if (isGold)
             {
-                objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow );
-                //GetComponent<SpriteRenderer>().sprite = goldSmile;
+                objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow );                
             }
             else
             {
                 objectGoodSmile.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.gray + Color.black);
-                //GetComponent<SpriteRenderer>().sprite = goodSmile;
             }
             
         }

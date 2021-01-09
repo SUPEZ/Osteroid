@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 202154162}
   - component: {fileID: 202154163}
   m_Layer: 0
-  m_Name: ScoreboardButton
+  m_Name: MarketButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 1439351813}
   - component: {fileID: 1439351814}
   m_Layer: 0
-  m_Name: MarketButton
+  m_Name: OptionsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
