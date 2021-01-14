@@ -41,6 +41,8 @@ public class GameController : MonoBehaviour {
             speed += 0.5f;
             semaphoreForSpeed = false;
         }
+
+        //Lose
         if (!GameObject.FindWithTag("Smile"))
         {
             PlayerLose();

@@ -7,17 +7,20 @@ public class CntrlSmile : MonoBehaviour
     public GameController gameController;
     public GameObject objectGoodSmile;
     public bool isGold = false;
+    public bool isAnger = false;
 
     private float speed, tilt;
     private Vector3 target;
-    private bool isAnger = false;
     private int localScore = 0;
     private int randomAngerActivator;
 
     private void Start()
     {
-        speed = gameController.speed;
-        tilt = gameController.tilt;
+        if (gameController)
+        {
+            speed = gameController.speed;
+            tilt = gameController.tilt;
+        }
         ChangeTarget();
         randomAngerActivator = Random.Range(5, 9);
     }
@@ -44,10 +47,7 @@ public class CntrlSmile : MonoBehaviour
             }
             
         }
-        if (gameController.cntScore == 20)
-        {
-            speed = gameController.speed;
-        }
+        
     }
     
     private void OnCollisionEnter2D(Collision2D nearObj)
