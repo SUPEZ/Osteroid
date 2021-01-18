@@ -231,8 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteOnMouseUpButton: {fileID: 0}
-  SpriteOnMouseDownButton: {fileID: 0}
+  sourceSound: {fileID: 1365437298}
 --- !u!1 &511442102
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,8 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteOnMouseUpButton: {fileID: 0}
-  SpriteOnMouseDownButton: {fileID: 0}
+  sourceSound: {fileID: 1365437298}
 --- !u!1 &552923905
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927701439
 GameObject:
@@ -623,8 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteOnMouseUpButton: {fileID: 0}
-  SpriteOnMouseDownButton: {fileID: 0}
+  sourceSound: {fileID: 1365437298}
 --- !u!1 &1017778124
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,8 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteOnMouseUpButton: {fileID: 0}
-  SpriteOnMouseDownButton: {fileID: 0}
+  sourceSound: {fileID: 1365437298}
 --- !u!1 &1170947644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1058,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1365437298 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82252726274440956, guid: 1d21b18d8d24aa049badd11e4ff94aeb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2027594937}
 --- !u!1 &1439351810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,8 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteOnMouseUpButton: {fileID: 0}
-  SpriteOnMouseDownButton: {fileID: 0}
+  sourceSound: {fileID: 1365437298}
 --- !u!1 &1566214676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1274,7 @@ RectTransform:
   - {fileID: 927701440}
   - {fileID: 202154160}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1369,3 +1369,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c2c89d5c433704ea0573053e0d094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1846858741
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480950009442446, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13665355bcd02794781e9a5e27c3f351, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &2027594937
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685117627149834, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d21b18d8d24aa049badd11e4ff94aeb, type: 2}
+  m_IsPrefabAsset: 0

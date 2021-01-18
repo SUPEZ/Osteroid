@@ -5,22 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour {
 
-    
-    private void OnMouseDown()
+    public AudioSource sourceSound;
+     
+    private IEnumerator OnMouseUpAsButton()
     {
-        
-    }
-
-    private void OnMouseUp()
-    {
-        
-    }
-
-    private void OnMouseUpAsButton()
-    {
+        SoundEffect();
+        yield return new WaitForSeconds(0.5f);
         switch (gameObject.name)
         {
-            case "PlayButton":
+            case "PlayButton":                
                 SceneManager.LoadScene("Play");
                 break;
             case "TutorialButton":
@@ -41,4 +34,11 @@ public class Buttons : MonoBehaviour {
 
         }
     }
+
+    private void SoundEffect()
+    {
+        sourceSound.pitch = Random.Range(0.75f, 1.25f);
+        sourceSound.PlayOneShot(sourceSound.clip);
+    }
+       
 }
