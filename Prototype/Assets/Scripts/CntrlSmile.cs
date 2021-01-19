@@ -8,6 +8,7 @@ public class CntrlSmile : MonoBehaviour
     public GameObject objectGoodSmile;
     public bool isGold = false;
     public bool isAnger = false;
+    public AudioSource sourceSound;
 
     private float speed, tilt;
     private Vector3 target;
@@ -93,6 +94,8 @@ public class CntrlSmile : MonoBehaviour
 
     void OnMouseUpAsButton()
     {
+        SoundEffect(sourceSound);
+
         if (isAnger)
         {
             Destroy(gameObject);
@@ -113,6 +116,7 @@ public class CntrlSmile : MonoBehaviour
             gameController.semaphoreForSpeed = true;
         }
         ChangeTarget();
+        
     }
 
     private void ChangeTarget()// смена конечной точки
@@ -134,5 +138,10 @@ public class CntrlSmile : MonoBehaviour
             target = new Vector3(Random.Range(-10, 1) * 100, Random.Range(1, 10) * 100, 0);
         }
     }
-    
+
+    private void SoundEffect(AudioSource sourceSound)
+    {
+        sourceSound.pitch = Random.Range(0.75f, 1.25f);
+        sourceSound.PlayOneShot(sourceSound.clip);
+    }
 }

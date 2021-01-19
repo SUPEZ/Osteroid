@@ -11,16 +11,18 @@ public class GameController : MonoBehaviour {
         
     public Text score;
     public int cntScore = 0;
-    public int randomGold;
+    public int GoldBoundsMultiplier = 10;
 
     public bool semaphoreForSpawn = true;
     public bool semaphoreForSpeed = true;
     
-    private ArrayList smiles = new ArrayList();
     private Vector3 spawnPosition;
     
+    private int randomGold;
+
     void Start () {
-        randomGold = Random.Range(20, 200);        
+        randomGold = randomSeed(1,3);
+        Debug.Log(randomGold);
         AddSmile();
     }
 	
@@ -50,21 +52,27 @@ public class GameController : MonoBehaviour {
     }
 
     void AddSmile ()
-    {
-        
+    {        
         spawnPosition = new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(-3.5f, 3.5f), 0);
         GameObject smile = Instantiate(goodSmile, spawnPosition, Quaternion.identity);
         smile.GetComponent<CntrlSmile>().gameController = this;
-        if (cntScore == randomGold)
+        if (cntScore / 10 == randomGold)
         {
             smile.GetComponent<CntrlSmile>().isGold = true;
-            randomGold = Random.Range(randomGold, randomGold + 100);
-        }
-        smiles.Add(smile);        
+            randomGold = randomSeed(1, 3) * GoldBoundsMultiplier;
+            GoldBoundsMultiplier = GoldBoundsMultiplier + 10;
+            Debug.Log(randomGold);
+
+        }        
     }
         
     private void PlayerLose()
     {
         SceneManager.LoadScene("Main Menu");
+    }
+
+    private int randomSeed(int first, int second)
+    {
+        return Random.Range(first, second);
     }
 }

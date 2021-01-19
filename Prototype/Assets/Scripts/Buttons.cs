@@ -9,7 +9,7 @@ public class Buttons : MonoBehaviour {
      
     private IEnumerator OnMouseUpAsButton()
     {
-        SoundEffect();
+        SoundEffect(sourceSound);
         yield return new WaitForSeconds(0.5f);
         switch (gameObject.name)
         {
@@ -35,7 +35,7 @@ public class Buttons : MonoBehaviour {
         }
     }
 
-    private void SoundEffect()
+    private void SoundEffect(AudioSource sourceSound)
     {
         sourceSound.pitch = Random.Range(0.75f, 1.25f);
         sourceSound.PlayOneShot(sourceSound.clip);
