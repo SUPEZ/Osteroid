@@ -641,7 +641,7 @@ MonoBehaviour:
   goodSmile: {fileID: 1111747923641672, guid: 7d181943fa45fee4d934b0f420862447, type: 2}
   score: {fileID: 2067009725}
   cntScore: 0
-  randomGold: 0
+  GoldBoundsMultiplier: 10
   semaphoreForSpawn: 1
   semaphoreForSpeed: 1
 --- !u!4 &809035884

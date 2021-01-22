@@ -12,6 +12,7 @@ public class CntrlSmile : MonoBehaviour
 
     private float speed, tilt;
     private Vector3 target;
+    private Vector3 rotateOrientation;
     private int localScore = 0;
     private int randomAngerActivator;
 
@@ -29,7 +30,7 @@ public class CntrlSmile : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
-        objectGoodSmile.transform.Rotate(Vector3.back * tilt);
+        objectGoodSmile.transform.Rotate(rotateOrientation * tilt);
         if (localScore % randomAngerActivator == 0 && localScore != 0)
         {
             isAnger = true;
@@ -107,6 +108,7 @@ public class CntrlSmile : MonoBehaviour
             gameController.cntScore += 1;
             localScore += 1;
         }
+
         if (gameController.semaphoreForSpawn == false)
         {
             gameController.semaphoreForSpawn = true;
@@ -115,28 +117,53 @@ public class CntrlSmile : MonoBehaviour
         {
             gameController.semaphoreForSpeed = true;
         }
+
         ChangeTarget();
         
     }
 
     private void ChangeTarget()// смена конечной точки
     {
+        //Координаты 
         if (gameObject.transform.position.x >= 0 && gameObject.transform.position.y >= 0)
         {
-            target = new Vector3(Random.Range(-10, 1) * 100, Random.Range(-10, 1) * 100, 0);
+            target = new Vector3(Random.Range(-10f, 1f) * 100f, Random.Range(-10f,-1f) * 100f, 0);
         }
         else if (gameObject.transform.position.x < 0 && gameObject.transform.position.y >= 0)
         {
-            target = new Vector3(Random.Range(1, 10) * 100, Random.Range(-10, 1) * 100, 0);
+            target = new Vector3(Random.Range(1f, 10f) * 100f, Random.Range(-10f, -1f) * 100f, 0);
         }
         else if (gameObject.transform.position.x < 0 && gameObject.transform.position.y < 0)
         {
-            target = new Vector3(Random.Range(1, 10) * 100, Random.Range(1, 10) * 100, 0);
+            target = new Vector3(Random.Range(1f, 10f) * 100f, Random.Range(1f, 10f) * 100f, 0f);
         }
         else if (gameObject.transform.position.x >= 0 && gameObject.transform.position.y < 0)
         {
-            target = new Vector3(Random.Range(-10, 1) * 100, Random.Range(1, 10) * 100, 0);
+            target = new Vector3(Random.Range(-10f, -1f) * 100f, Random.Range(1f, 10f) * 100f, 0);
         }
+        //Поворот
+        rotateOrientation = RandomRotate();
+    }
+
+    private Vector3 RandomRotate()
+    {
+        var randomCnt = Random.Range(1, 6);
+        switch (randomCnt)
+        {
+            case 1:
+                return Vector3.back;
+            case 2:
+                return Vector3.forward;
+            case 3:
+                return Vector3.down;
+            case 4:
+                return Vector3.up;
+            case 5:
+                return Vector3.left;
+            case 6:
+                return Vector3.right;
+        } 
+        return Vector3.zero;
     }
 
     private void SoundEffect(AudioSource sourceSound)
