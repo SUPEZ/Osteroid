@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - Smile
   - Score
+  - Meteor
   layers:
   - Default
   - TransparentFX
@@ -31,7 +31,7 @@ TagManager:
   - 
   - 
   - Score
-  - Smile
+  - Meteor
   - 
   - 
   - 
