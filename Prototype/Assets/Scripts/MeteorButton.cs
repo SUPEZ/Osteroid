@@ -13,14 +13,15 @@ public class MeteorButton : MonoBehaviour
     [SerializeField] private Vector3 _rotateOrientation;
     [SerializeField] private int _localScore = 0;
     [SerializeField] private int _randomAngerActivator;
-
+    
+    #region Cached component
     private Transform _transformMeteor = null;
     private Transform _transformButton = null;
     
     private bool _transformMeteorCached = false;
     private bool _transformButtonCached = false;
     
-    public Transform cachedMeteorTransform
+    public Transform CachedMeteorTransform
     {
         get
         {
@@ -34,7 +35,7 @@ public class MeteorButton : MonoBehaviour
         }
     }
 
-    public Transform cachedButtonTransform
+    public Transform CachedButtonTransform
     {
         get
         {
@@ -47,7 +48,9 @@ public class MeteorButton : MonoBehaviour
 
         }
     }
-        
+    
+    #endregion 
+    
     private void Start()
     {
         if (mainSpawner)
@@ -61,15 +64,15 @@ public class MeteorButton : MonoBehaviour
 
     private void Update()
     {
-        cachedButtonTransform.position = Vector3.MoveTowards(cachedButtonTransform.position, _target, Time.deltaTime * _speed);
-        cachedMeteorTransform.Rotate(_rotateOrientation * _tilt);
+        CachedButtonTransform.position = Vector3.MoveTowards(CachedButtonTransform.position, _target, Time.deltaTime * _speed);
+        CachedMeteorTransform.Rotate(_rotateOrientation * _tilt);
          
     }
     
     private void OnCollisionEnter2D(Collision2D nearObj)
     {
         
-        if (nearObj.gameObject.tag == "Wall")
+        if (nearObj.gameObject.CompareTag("Wall"))
         {
             Debug.Log(nearObj.gameObject.name);
             if (objectMeteor.Anger == true)
@@ -85,7 +88,7 @@ public class MeteorButton : MonoBehaviour
             }
             
         }
-        if (nearObj.gameObject.tag == "Meteor")
+        if (nearObj.gameObject.CompareTag("Meteor"))
         {
             if (objectMeteor.Anger == true && nearObj.gameObject.GetComponent<MeteorButton>().objectMeteor.Anger == false)
             {
@@ -101,11 +104,6 @@ public class MeteorButton : MonoBehaviour
         }
     }
         
-    private void OnMouseDrag()
-    {
-        
-    }
-
     private void OnMouseDown()
     {
         SoundEffect(_sourceSound);

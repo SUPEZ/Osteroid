@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 0
   sourceSound: {fileID: 1365437298}
 --- !u!1 &552923905
 GameObject:
@@ -539,6 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 1
   sourceSound: {fileID: 1365437298}
 --- !u!1 &1170947644
 GameObject:
@@ -1080,6 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e92c96e95066574aa3130ef9cde1514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 4
   sourceSound: {fileID: 1365437298}
 --- !u!1 &1566214676
 GameObject:
